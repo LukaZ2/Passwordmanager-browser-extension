@@ -45,6 +45,10 @@ function autofillPasswordAndUsername() {
             if (json === null || !json.found) return
             if (usernameField !== null) replaceValue(usernameField, json.username)
             if (passwordField !== null) replaceValue(passwordField, json.password)
+
+            setTimeout(function () {
+                window.alert("Autofilled username & password.")
+            }, 100)
         })
 
 }
